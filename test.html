@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .recipe-list {
+            margin-bottom: 20px;
+        }
+        .recipe {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .recipe-form {
+            margin-bottom: 20px;
+        }
+        .recipe-form input[type="text"],
+        .recipe-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .recipe-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .recipe-view textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe App</h1>
+        <div class="recipe-form">
+            <input type="text" id="recipeName" placeholder="Enter recipe name">
+            <textarea id="recipeContent" placeholder="Enter recipe content"></textarea>
+            <input type="submit" value="Add Recipe" onclick="addRecipe()">
+        </div>
+        <div class="recipe-list">
+            <h2>Recipes</h2>
+            <div id="recipes"></div>
+        </div>
+        <div class="recipe-view" style="display: none;">
+            <h2 id="recipeTitle"></h2>
+            <textarea id="appendedContent" placeholder="Append to recipe"></textarea>
+            <input type="submit" value="Append" onclick="appendContent()">
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
